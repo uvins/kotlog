@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class Jalog {
+    // Colors
     private var ansiReset = "\u001B[0m"
     private var ansiRed = "\u001B[31m"
     private var ansiGreen = "\u001B[32m"
@@ -11,6 +12,8 @@ class Jalog {
     var ansiBlue = "\u001B[34m"
 
     private var date = Date()
+
+    // Data format, USA or EURO
     private var usaFormat = true
 
     fun euroFormat(euroFormat: Boolean) {
@@ -18,7 +21,7 @@ class Jalog {
     }
 
     fun info(msg: String) {
-
+        // Format check
         val formater: SimpleDateFormat = if (usaFormat) {
             SimpleDateFormat("MM.dd HH:mm:ss")
         } else {
@@ -31,7 +34,7 @@ class Jalog {
     }
 
     fun warn(msg: String) {
-
+        // Format check
         val formater: SimpleDateFormat = if (usaFormat) {
             SimpleDateFormat("MM.dd HH:mm:ss")
         } else {
@@ -44,7 +47,7 @@ class Jalog {
     }
 
     fun error(msg: String) {
-
+        // Format check
         val formater: SimpleDateFormat = if (usaFormat) {
             SimpleDateFormat("MM.dd HH:mm:ss")
         } else {
@@ -57,7 +60,7 @@ class Jalog {
     }
 
     fun custom(option: String, msg: String) {
-
+        // Format check
         val formater: SimpleDateFormat = if (usaFormat) {
             SimpleDateFormat("MM.dd HH:mm:ss")
         } else {
